@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CE0F7AC-97C2-4791-8BFF-7B5BC6DB2E59}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Feedback</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Feedback</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchSdkVersion>6.1</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BuildIpa>true</BuildIpa>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Distribution</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Zooloader Pty Ltd (MG5RMC93L2)</CodesignKey>
+    <CodesignProvision>8D9E4ACD-12F7-4504-9DFD-80D6F077BE01</CodesignProvision>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+    <IpaPackageName />
+    <MtouchSdkVersion>7.0</MtouchSdkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="Newtonsoft.Json.MonoTouch">
+      <HintPath>..\Shared\iOS\Newtonsoft.Json.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.MonoTouch">
+      <HintPath>..\Shared\iOS\ZXing.Net.Mobile.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.monotouch">
+      <HintPath>..\Shared\iOS\zxing.monotouch.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomOverlayView.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ScannerViewController.cs" />
+    <Compile Include="SubmitViewController.cs" />
+    <Compile Include="SubmitViewController.designer.cs">
+      <DependentUpon>SubmitViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmationViewController.cs" />
+    <Compile Include="ConfirmationViewController.designer.cs">
+      <DependentUpon>ConfirmationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\PickerModel.cs" />
+    <Compile Include="Class\LoadingOverlay.cs" />
+    <Compile Include="Utility\APIHelper.cs" />
+    <Compile Include="Utility\ConnectionHelper.cs" />
+    <Compile Include="Utility\LittleWatson.cs" />
+    <Compile Include="Utility\Reachability.cs" />
+    <Compile Include="Utility\SecurityHelper.cs" />
+    <Compile Include="Utility\StorageHelper.cs" />
+    <Compile Include="Utility\UIConstants.cs" />
+    <Compile Include="Utility\Utils.cs" />
+    <Compile Include="Class\StackPanel.cs" />
+    <Compile Include="Class\UIHelper.cs" />
+    <Compile Include="Class\TableViewModel.cs" />
+    <Compile Include="Class\TableItem.cs" />
+    <Compile Include="Class\TableItemGroup.cs" />
+    <Compile Include="Class\TableSource.cs" />
+    <Compile Include="FeedbackViewController.cs" />
+    <Compile Include="FeedbackViewController.designer.cs">
+      <DependentUpon>FeedbackViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionViewController.cs" />
+    <Compile Include="QuestionViewController.designer.cs">
+      <DependentUpon>QuestionViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="SubmitViewController.xib" />
+    <InterfaceDefinition Include="ConfirmationViewController.xib" />
+    <InterfaceDefinition Include="FeedbackViewController.xib" />
+    <InterfaceDefinition Include="QuestionViewController.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-50.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Icon-Small-50%402x.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Default.png" />
+    <BundleResource Include="Default%402x.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Default-568h%402x.png" />
+    <BundleResource Include="Resources\Icon-120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharableTypes\SharableTypes.iOS.csproj">
+      <Project>{74154D8F-6153-4841-937E-96912598C638}</Project>
+      <Name>SharableTypes.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

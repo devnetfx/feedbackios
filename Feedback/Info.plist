@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>7.0</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon@2x</string>
+		<string>Icon</string>
+		<string>Icon-Small</string>
+		<string>Icon-Small@2x</string>
+		<string>Default</string>
+		<string>Default@2x</string>
+		<string>Icon-120</string>
+	</array>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.3</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.architected.feedback</string>
+	<key>CFBundleDisplayName</key>
+	<string>Feedback</string>
+</dict>
+</plist>
